@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="1" parallel="classes" preserve-order="true">
+    <test name="Test1">
+        <classes>
+            <class name="com.vedoc.qa.testcases.VehicleDataPageTest_CU" />
+        </classes>
+    </test>
+    <test name="Test2">
+        <classes>
+            <class name="com.vedoc.qa.testcases.MajorAssemblyData_ChangingUser" />
+        </classes>
+    </test>
+    <test name="Test3">
+        <classes>
+            <class name="com.vedoc.qa.testcases.pdf_CU" />
+        </classes>
+    </test>
+</suite>

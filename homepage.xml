@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+    <parameter name="xrayApiKey" value="ODAwODEwOTcyNDk5Orx3WZdrQ6bYNr1URXn+PV4VPbXH" />
+    <!-- Other configurations and test classes go here -->
+    <test name="Test3">
+        <classes>
+            <class name="com.vedoc.qa.testcases.HomePageTest" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,11 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: pipeline
+spec:
+  tasks:
+    - name: run-simple-selenium-test-on-chrome
+      description: Run a simple Selenium test in Python
+      taskRef:
+        name: run-simple-selenium-test-on-chrome

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="1" parallel="classes" preserve-order="true">
+
+    <test name="Test">
+        <classes>
+            <class name="com.vedoc.qa.testcases.VehicleDataPageTest" />
+        </classes>
+    </test>
+    <test name="Test1">
+        <classes>
+            <class name="com.vedoc.qa.testcases.MajorAssembliesPageTest" />
+        </classes>
+    </test>
+    <test name="Test2">
+        <classes>
+            <class name="com.vedoc.qa.testcases.MajorAssemblyPageTest_R" />
+        </classes>
+    </test>
+    <test name="Test3">
+        <classes>
+            <class name="com.vedoc.qa.testcases.TracebilityPageTest" />
+        </classes>
+    </test>
+    <test name="Test4">
+        <classes>
+            <class name="com.vedoc.qa.testcases.VehicleComparisionPage_Test" />
+        </classes>
+    </test>
+    <test name="Test5">
+        <classes>
+            <class name="com.vedoc.qa.testcases.PartsIdentificationPageTest" />
+        </classes>
+    </test>
+    <test name="Test6">
+        <classes>
+            <class name="com.vedoc.qa.testcases.CKDVehiclePage_Test" />
+        </classes>
+    </test>
+    <test name="Test7">
+        <classes>
+            <class name="com.vedoc.qa.testcases.MasterDataPageTest_WriteAccess" />
+        </classes>
+    </test>
+    <test name="Test8">
+        <classes>
+            <class name="com.vedoc.qa.testcases.RulesAssistantTest" />
+        </classes>
+    </test>
+    <test name="Test9">
+        <classes>
+            <class name="com.vedoc.qa.testcases.AdministrationPageTest" />
+        </classes>
+    </test>
+    <test name="Test10">
+        <classes>
+            <class name="com.vedoc.qa.testcases.PassengerCar_WriteAccess" />
+        </classes>
+    </test>
+    <test name="Test11">
+        <classes>
+            <class name="com.vedoc.qa.testcases.Truck_WriteAccess" />
+        </classes>
+    </test>
+    <test name="Test12">
+        <classes>
+            <class name="com.vedoc.qa.testcases.pdf" />
+        </classes>
+    </test>
+    <test name="Test13">
+        <classes>
+            <class name="com.vedoc.qa.testcases.XFunction" />
+        </classes>
+    </test>
+
+</suite>

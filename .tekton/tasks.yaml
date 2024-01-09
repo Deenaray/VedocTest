@@ -1,0 +1,39 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: run-simple-selenium-test-on-chrome
+spec:
+  steps:
+    - name: pytest
+      image: python:3
+      script: |
+        #!/bin/bash
+        echo "Installing pytest"
+        pip install selenium==3.141 pytest
+        echo "Running tests on chrome"
+        mkdir /selenium-hub && cd /selenium-hub
+        cat <<EOF > test_basic.py
+        from selenium import webdriver
+        from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+        def test_python_title_firefox():
+            driver = webdriver.Remote(
+                # Use public / floating IP address
+                command_executor="http://53.13.177.132:4444/wd/hub",
+                desired_capabilities=DesiredCapabilities.FIREFOX.copy()
+            )
+            driver.get("https://www.python.org")
+            assert driver.title == "Welcome to Python.org"
+            driver.close()
+
+        def test_python_title_chrome():
+            driver = webdriver.Remote(
+                # Use public / floating IP address
+                command_executor="http://53.13.177.132:4444/wd/hub",
+                desired_capabilities=DesiredCapabilities.CHROME.copy()
+            )
+            driver.get("https://www.python.org")
+            assert driver.title == "Welcome to Python.org"
+            driver.close()
+        EOF
+        pytest
